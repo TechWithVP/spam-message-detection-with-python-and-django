@@ -1,0 +1,159 @@
+@import 'fonts.css';
+* {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../Images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 100%;
+    height: 3.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+    height: 3.5em;
+    margin-right: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .brand {
+    font-size: 2.3rem;
+    color: #fff;
+    font-family: Jonesy;
+    text-decoration: none;
+    padding: 0 0 0 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 0.6em 1em;
+    text-decoration: none !important;
+    color: gray !important;
+    font-size: 1.3rem;
+    font-family: Azonix;
+    transition: 0.3s color;
+}
+
+header nav ul li a:hover {
+    color: #fff !important;
+}
+
+.active {
+    color: #fff !important;
+}
+
+.content {
+    padding: 0 2em;
+    padding-top: 3.5em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-form textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 2px white solid;
+    border-radius: 0.3em;
+    position: relative;
+    height: 10em;
+    margin-bottom: 0.5em;
+    resize: none;
+    padding: 0.5em;
+    color: #fff;
+    font-family: RobotL;
+    font-size: 1.3rem;
+}
+
+.content h1 {
+    color: #fff;
+    font-family: Azonix;
+    margin: 0;
+    padding: 0;
+}
+
+.content h5 {
+    margin-top: 0;
+    padding-top: 0;
+    color: #fff;
+    font-family: Azonix;
+}
+
+.content p {
+    color: #fff;
+    font-family: Centaur;
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+}
+
+.check-holder {
+    display: flex;
+    justify-content: end;
+}
+
+.check-btn {
+    padding: 0.4em 4em;
+    border: none;
+    border-radius: 0.3em;
+    background: #fff;
+    font-family: Roboto;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    font-family: Centaur;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .form-content {
+      padding-top: 0;
+    }
+    .main-form {
+        margin-bottom: 2em;
+    }
+    .typo-content {
+        padding-bottom: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+
+    header nav {
+        margin-right: 1em;
+    }
+
+    header nav ul li a {
+        padding: 1em 0.4em;
+        font-size: 1rem;
+    }
+}

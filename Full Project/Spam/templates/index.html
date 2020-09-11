@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'Spam/Css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Spam/Css/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'Spam/Css/radio.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Main Section Start -->
+    <section>
+        <!-- Header part start -->
+        <header>
+            <nav>
+                <div><a href="#" class="brand">SPD</a></div>
+                <ul>
+                    <li><a href="#" class="active">Web App</a></li>
+                    <li><a href="#">Web Api</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header part end -->
+
+        <!-- Main Content part start -->
+        <div class="fluid-container content">
+            <div class="row m-auto">
+                <!-- Left side Text part start -->
+                <div class="col-md-6 p-5 m-auto typo-content">
+                    <h1>
+                        welcome to spd
+                    </h1>
+                    <h5>[spam message detection]</h2>
+                        <p>
+                            This a online platform where
+                            you can check any text either
+                            it is Spam Message Text or not.
+                        </p>
+                        <p>
+                            Just enter your text into the
+                            Textarea and select algorythm,
+                            press CHECK button and wait
+                            while your data proceds.
+                        </p>
+                        <p>
+                            After proccessing you will see
+                            result.
+                        </p>
+                </div>
+                <!-- Left side Text part end -->
+
+                <!-- Form part start -->
+                <div class="col-md-6 p-5 m-auto form-content">
+                    <form method="post" action="check" class="main-form">
+                        {% csrf_token %}
+                        <textarea name="rawdata" placeholder="Enter Your Text Here..." id="rawdata"></textarea><br>
+                        <div class="algo-choice">
+                            <label class="radiocontainer">Algo - 1
+                                <input type="radio" name="algo" value="Algo-1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radiocontainer">Algo - 2
+                                <input type="radio" name="algo" value="Algo-2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radiocontainer">Algo - 3
+                                <input type="radio" name="algo" value="Algo-3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="check-holder">
+                            <button type="submit" class="check-btn">Check</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Form part end -->
+            </div>
+            <!-- Footer start -->
+            <div class="footer">
+                <p>Copyright &copy; 2020 Developed by <b>TechWithVP</b></p>
+            </div>
+            <!-- Footer end -->
+        </div>
+        <!-- Main Content part end -->
+    </section>
+    <!-- Main Section End -->
+    <script src="./Js/JQuery.js"></script>
+    <script src="./Js/Bootstrap.min.js"></script>
+    <script src="./Js/Main.js"></script>
+</body>
+
+</html>
